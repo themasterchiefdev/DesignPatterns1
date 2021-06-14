@@ -1,0 +1,55 @@
+@page "/DecoratorPattern"
+@using DesignPatterns.Decorator.Interfaces
+@using DesignPatterns.Decorator.Models
+
+<h4>Decorator Pattern</h4>
+@if (_listOfUsers.Any())
+{
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>UserName</th>
+            <th>Email</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in _listOfUsers)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.Username</td>
+                <td>@item.Email</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
+
+@code {
+
+    [Inject]
+    private IUserRepository UserRepository { get; set; }
+
+
+    private IEnumerable<User> _listOfUsers = new List<User>();
+
+    protected override async Task OnInitializedAsync()
+    {
+
+        try
+        {
+            await base.OnInitializedAsync();
+            _listOfUsers = await UserRepository.GetUsers();
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+
+        }
+
+    }
+
+}
