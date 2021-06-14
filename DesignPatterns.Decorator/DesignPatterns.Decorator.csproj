@@ -6,7 +6,13 @@
 
     <ItemGroup>
       <PackageReference Include="HttpClientFactory" Version="1.0.3" />
+      <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="5.0.0" />
+      <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="5.0.0" />
       <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Services\Repository" />
     </ItemGroup>
 
 </Project>

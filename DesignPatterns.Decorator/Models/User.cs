@@ -1,9 +1,5 @@
-using System;
 using System.Collections.Generic;
-using System.Globalization;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
-
 namespace DesignPatterns.Decorator.Models
 {
 
@@ -34,7 +30,7 @@ namespace DesignPatterns.Decorator.Models
         public Company Company { get; set; }
     }
 
-    public partial class Address
+    public class Address
     {
         [JsonProperty("street")]
         public string Street { get; set; }
@@ -52,7 +48,7 @@ namespace DesignPatterns.Decorator.Models
         public Geo Geo { get; set; }
     }
 
-    public partial class Geo
+    public class Geo
     {
         [JsonProperty("lat")]
         public string Lat { get; set; }
@@ -61,7 +57,7 @@ namespace DesignPatterns.Decorator.Models
         public string Lng { get; set; }
     }
 
-    public partial class Company
+    public class Company
     {
         [JsonProperty("name")]
         public string Name { get; set; }
@@ -85,10 +81,10 @@ namespace DesignPatterns.Decorator.Models
 
     internal static class Converter
     {
-        public static readonly JsonSerializerSettings Settings = new JsonSerializerSettings
+        public static readonly JsonSerializerSettings Settings = new JsonSerializerSettings()
         {
             MetadataPropertyHandling = MetadataPropertyHandling.Ignore,
-            DateParseHandling = DateParseHandling.None,
+            DateParseHandling = DateParseHandling.None
 
         };
     }

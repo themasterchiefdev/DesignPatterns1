@@ -1,7 +1,8 @@
 @page "/DecoratorPattern"
 @using DesignPatterns.Decorator.Interfaces
 @using DesignPatterns.Decorator.Models
-<h3>Decorator Pattern</h3>
+
+<h4>Decorator Pattern</h4>
 @if (_listOfUsers.Any())
 {
     <table class="table">
@@ -32,10 +33,12 @@
     [Inject]
     private IUserRepository UserRepository { get; set; }
 
+
     private IEnumerable<User> _listOfUsers = new List<User>();
 
     protected override async Task OnInitializedAsync()
     {
+
         try
         {
             await base.OnInitializedAsync();
@@ -44,7 +47,7 @@
         catch (Exception e)
         {
             Console.WriteLine(e);
-            
+
         }
 
     }

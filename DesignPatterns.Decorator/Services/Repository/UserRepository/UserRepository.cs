@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using DesignPatterns.Decorator.Interfaces;
 using DesignPatterns.Decorator.Models;
 using Newtonsoft.Json;
-namespace DesignPatterns.Decorator.Services
+namespace DesignPatterns.Decorator.Services.Repository.UserRepository
 {
     public class UserRepository : IUserRepository
     {
