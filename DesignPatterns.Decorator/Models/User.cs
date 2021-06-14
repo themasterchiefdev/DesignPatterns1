@@ -6,7 +6,7 @@ using Newtonsoft.Json.Converters;
 
 namespace DesignPatterns.Decorator.Models
 {
-    
+
     public partial class User
     {
         [JsonProperty("id")]
