@@ -4,6 +4,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatterns.Decorator", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatterns.Ui", "DesignPatterns.Ui\DesignPatterns.Ui.csproj", "{A14C260C-0FCE-4E02-B3D2-6DEB6C2BDFC9}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{8544020F-8AD5-4DB1-8792-5AD471A483CF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{9E3E4E01-8D69-437B-A6C4-966840E5EEA6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +22,9 @@ Global
 		{A14C260C-0FCE-4E02-B3D2-6DEB6C2BDFC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A14C260C-0FCE-4E02-B3D2-6DEB6C2BDFC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A14C260C-0FCE-4E02-B3D2-6DEB6C2BDFC9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A14C260C-0FCE-4E02-B3D2-6DEB6C2BDFC9} = {8544020F-8AD5-4DB1-8792-5AD471A483CF}
+		{0EA70763-16D0-4819-831E-50775F8780BF} = {8544020F-8AD5-4DB1-8792-5AD471A483CF}
 	EndGlobalSection
 EndGlobal

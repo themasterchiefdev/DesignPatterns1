@@ -456,3 +456,4 @@ FodyWeavers.xsd
 *.tlog
 
 # End of https://www.toptal.com/developers/gitignore/api/rider,visualstudio,visualstudiocode
+.idea/.idea.DesignPatterns/.idea/
